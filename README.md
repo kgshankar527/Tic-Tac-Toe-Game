@@ -35,13 +35,12 @@ The first player to align 3 symbols in a row, column, or diagonal is the Winner.
 ---
 
 📂 Project Structure
-
 tic-tac-toe/
-│
-├── index.html   # 🎨 Game Structure
-├── style.css    # 💅 Styling (Board, Buttons, Line)
-├── script.js    # 🧠 Game Logic (Turns, Winner, Reset)
-└── README.md    # 📖 Documentation
+
+── 'index.html'  ──> # 🎨 Structure of Game
+── 'style.css'   ──> # 💅 Styling (Board, Buttons, Line)
+── 'script.js'   ──> # 🧠 Game Logic (Turns, Winner, Reset)
+── 'random.md'   ──> # 📖 Documentation (आप यह पढ़ रहे हैं 😉)
 
 
 ---
