@@ -143,6 +143,6 @@ Or just double-click index.html to start the game 🎲
 
 ---
 
-<p align="center">✨ Developed with ❤️ by <b>kgshankar527</b> ✨</p>  
+<p align="center">✨ Developed with ❤️ by <b>𝐊𝐆🆂🅷🅰🅽🅺🅴🆁</b> ✨</p>  
 ---
 
