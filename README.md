@@ -95,8 +95,10 @@ Resets game when needed
 
 Clone this repo:
 
-git clone https://github.com/your-username/tic-tac-toe.git
-cd tic-tac-toe
+git clone [https://github.com/your-username/tic-tac-toe.git
+cd tic-tac-toe]
+## 🔹Live Demo🔹
+(https://kgshankar527.github.io/Tic-Tac-Toe-Game/)
 
 Run in browser:
 
