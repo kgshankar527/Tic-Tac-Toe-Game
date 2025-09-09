@@ -1,112 +1,85 @@
-
-🎮 Tic-Tac-Toe Game
+# 🎮 Tic-Tac-Toe Game
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Responsive-Yes-orange?style=for-the-badge" />
 </p>
----
-
-📌 Overview
-
-A 2 Player Tic-Tac-Toe Game (⭕ O vs ❌ X) built with HTML, CSS, and JavaScript.
-The first player to align 3 symbols in a row, column, or diagonal is the Winner.
-
 
 ---
 
-✨ Features
+## 📌 Overview
 
-🔄 Turn-based Gameplay → O goes first, then X
-
-🏆 Winner Detection → Auto-check for Rows, Columns & Diagonals
-
-🔴 Winning Line Highlight → Shows the winning combination with a red line
-
-📢 Winner Message → "🎉 Congratulations, Winner is O/X"
-
-♻️ Reset / New Game Button → Clears board and removes line
-
-📱 Responsive Design → Works smoothly on Mobile & Desktop
-
-
+A 2 Player **Tic-Tac-Toe Game** (⭕ O vs ❌ X) built with **HTML, CSS, and JavaScript**.  
+The first player to align **3 symbols** in a row, column, or diagonal is the **Winner**.
 
 ---
 
-📂 Project Structure
-tic-tac-toe/
+## ✨ Features
 
-── 'index.html'  ──> # 🎨 Structure of Game
-── 'style.css'   ──> # 💅 Styling (Board, Buttons, Line)
-── 'script.js'   ──> # 🧠 Game Logic (Turns, Winner, Reset)
-── 'random.md'   ──> # 📖 Documentation (आप यह पढ़ रहे हैं 😉)
-
-
----
-
-🛠️ Code Explanation
-
-🔹 1. index.html
-
-3x3 Grid of Boxes
-
-Reset & New Game buttons
-
-Winner message container
-
-
-🔹 2. style.css
-
-Stylish Responsive Grid
-
-Red Winning Line effect
-
-Attractive colors & shadows
-
-
-🔹 3. script.js
-
-Manages O/X turns
-
-Checks winning patterns
-
-Displays Winner & Draws Red Line
-
-Resets game when needed
-
-
+- 🔄 **Turn-based Gameplay** → O goes first, then X  
+- 🏆 **Winner Detection** → Auto-check for Rows, Columns & Diagonals  
+- 🔴 **Winning Line Highlight** → Shows the winning combination with a red line  
+- 📢 **Winner Message** → `"🎉 Congratulations, Winner is O/X"`  
+- ♻️ **Reset / New Game Button** → Clears board and removes line  
+- 📱 **Responsive Design** → Works smoothly on Mobile & Desktop  
 
 ---
 
-🎯 Winning Patterns
-
-➖ Horizontal → Top, Middle, Bottom rows
-
-↕ Vertical → Left, Middle, Right columns
-
-✖ Diagonal → Left→Right & Right→Left
-
-
+## 📂 Project Structure
+Tic toc toe/<br>
+--`index.html`~> Structure of Game<br> 
+--`script.js` ~> Game Logic (Turns, Winner Reset)<br>
+--`sytle.css` ~> Style (Board, Buttons Line)<br>
+--`Readme.md` ~> Documentation<br>
 
 ---
 
-🚀 How to Run
+## 🛠️ Code Explanation
+
+### 🔹 1. index.html
+- 3x3 Grid of Boxes  
+- Reset & New Game buttons  
+- Winner message container  
+
+### 🔹 2. style.css
+- Stylish Responsive Grid  
+- Red Winning Line effect  
+- Attractive colors & shadows  
+
+### 🔹 3. script.js
+- Manages O/X turns  
+- Checks winning patterns  
+- Displays Winner & Draws Red Line  
+- Resets game when needed  
+
+---
+
+## 🎯 Winning Patterns
+
+- ➖ **Horizontal** → Top, Middle, Bottom rows  
+- ↕ **Vertical** → Left, Middle, Right columns  
+- ✖ **Diagonal** → Left→Right & Right→Left  
+
+---
+
+## 🚀 How to Run
 
 Clone this repo:
-
-git clone [https://github.com/your-username/tic-tac-toe.git
-cd tic-tac-toe]
-## 🔹Live Demo🔹
-https://kgshankar527.github.io/Tic-Tac-Toe-Game/
-#  Pang-Game
-https://kgshankar527.github.io/Tic-Tac-Toe-Game/Pang-Game/
+```sh
+git clone https://github.com/your-username/tic-tac-toe.git
+cd tic-tac-toe
 
 Run in browser:
 
 open index.html
 
 Or just double-click index.html to start the game 🎲
+
+🔹 Live Demo 🔹
+
+👉 Tic-Tac-Toe Game
+👉 Pang-Game
 
 
 ---
@@ -146,63 +119,6 @@ Or just double-click index.html to start the game 🎲
 
 ---
 
-<p align="center">✨ Developed with ❤️ by <b>𝐊𝐆🆂🅷🅰🅽🅺🅴🆁</b> ✨</p>  
+<p align="center">✨ Developed with ❤️ by <b>𝐊𝐆🆂🅷🅰🅽🅺🅴🆁</b> ✨</p>
+```
 ---
-
-
-
-    let correctPin = "1234";
-    let attempts = 0;
-    let balance = 10000;
-    let screen = document.getElementById("screen");
-
-    function pressNum(num) {
-      document.getElementById("pinInput").value += num;
-    }
-
-    function clearInput() {
-      document.getElementById("pinInput").value = "";
-    }
-
-    function submitPin() {
-      let pin = document.getElementById("pinInput").value;
-      attempts++;
-
-      if (pin === correctPin) {
-        screen.innerHTML = "✅ Access Granted!<br>Select Option:";
-        document.getElementById("pinInput").classList.add("hidden");
-        document.getElementById("keypad").classList.add("hidden");
-        document.getElementById("menu-section").classList.remove("hidden");
-      } else {
-        if (attempts >= 3) {
-          screen.innerHTML = "🚫 Card Blocked!";
-          document.getElementById("pinInput").disabled = true;
-        } else {
-          screen.innerHTML = "❌ Wrong PIN! Attempts left: " + (3 - attempts);
-          clearInput();
-        }
-      }
-    }
-
-    function checkBalance() {
-      screen.innerHTML = "💰 Your Balance is ₹" + balance;
-    }
-
-    function withdrawMoney() {
-      let amount = prompt("Enter amount to withdraw:");
-      amount = Number(amount);
-      if (amount > 0 && amount <= balance) {
-        balance -= amount;
-        screen.innerHTML = "✅ Withdraw ₹" + amount + " successful.<br>Remaining Balance: ₹" + balance;
-      } else {
-        screen.innerHTML = "⚠️ Invalid amount or insufficient balance!";
-      }
-    }
-
-    function exitATM() {
-      screen.innerHTML = "👋 Thank you for using our ATM!";
-      setTimeout(() => {
-        location.reload();
-      }, 2000);
-    }
-
