@@ -119,6 +119,7 @@ Or just double-click index.html to start the game 🎲
 
 ---
 
-<p align="center">✨ Developed with ❤️ by <b>𝐊𝐆🆂🅷🅰🅽🅺🅴🆁</b> ✨</p>
+  Developed with ❤️ by
+✨ 𝐊𝐆🆂🅷🅰🅽🅺🅴🆁 ✨
 ```
 ---
