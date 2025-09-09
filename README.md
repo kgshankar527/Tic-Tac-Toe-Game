@@ -98,7 +98,9 @@ Clone this repo:
 git clone [https://github.com/your-username/tic-tac-toe.git
 cd tic-tac-toe]
 ## 🔹Live Demo🔹
-(https://kgshankar527.github.io/Tic-Tac-Toe-Game/)
+https://kgshankar527.github.io/Tic-Tac-Toe-Game/
+#  Pang-Game
+https://kgshankar527.github.io/Tic-Tac-Toe-Game/Pang-Game/
 
 Run in browser:
 
