@@ -149,3 +149,60 @@ Or just double-click index.html to start the game 🎲
 <p align="center">✨ Developed with ❤️ by <b>𝐊𝐆🆂🅷🅰🅽🅺🅴🆁</b> ✨</p>  
 ---
 
+
+
+    let correctPin = "1234";
+    let attempts = 0;
+    let balance = 10000;
+    let screen = document.getElementById("screen");
+
+    function pressNum(num) {
+      document.getElementById("pinInput").value += num;
+    }
+
+    function clearInput() {
+      document.getElementById("pinInput").value = "";
+    }
+
+    function submitPin() {
+      let pin = document.getElementById("pinInput").value;
+      attempts++;
+
+      if (pin === correctPin) {
+        screen.innerHTML = "✅ Access Granted!<br>Select Option:";
+        document.getElementById("pinInput").classList.add("hidden");
+        document.getElementById("keypad").classList.add("hidden");
+        document.getElementById("menu-section").classList.remove("hidden");
+      } else {
+        if (attempts >= 3) {
+          screen.innerHTML = "🚫 Card Blocked!";
+          document.getElementById("pinInput").disabled = true;
+        } else {
+          screen.innerHTML = "❌ Wrong PIN! Attempts left: " + (3 - attempts);
+          clearInput();
+        }
+      }
+    }
+
+    function checkBalance() {
+      screen.innerHTML = "💰 Your Balance is ₹" + balance;
+    }
+
+    function withdrawMoney() {
+      let amount = prompt("Enter amount to withdraw:");
+      amount = Number(amount);
+      if (amount > 0 && amount <= balance) {
+        balance -= amount;
+        screen.innerHTML = "✅ Withdraw ₹" + amount + " successful.<br>Remaining Balance: ₹" + balance;
+      } else {
+        screen.innerHTML = "⚠️ Invalid amount or insufficient balance!";
+      }
+    }
+
+    function exitATM() {
+      screen.innerHTML = "👋 Thank you for using our ATM!";
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
+    }
+
